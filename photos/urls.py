@@ -1,12 +1,8 @@
-from django.urls import path
+from django.urls import re_path as url
 from . import views
 
-
-
-
-urlpatterns = [
-    path('', views.gallery, name='gallery'),
-    path('photo/<str:pk>/',views.viewphoto, name='photo'),
-    path('add/', views.addphoto, name='add'),
-
+urlpatterns=[
+    url(r'^$',views.gallery,name='gallery'),
+    url('photo/<str:pk>/',views.viewphoto, name='photo'),
+    url('add/', views.addphoto, name='add'),
 ]
