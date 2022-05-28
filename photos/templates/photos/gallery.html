@@ -1,5 +1,66 @@
-<h1>My photos</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis velit et reprehenderit quis ullam facilis.
-    Consequatur ullam aperiam possimus iusto doloribus neque excepturi velit debitis reprehenderit, ducimus ad ab
-    distinctio sed officia! Delectus doloremque quibusdam provident! Recusandae ad doloribus
-    molestiae, voluptatem facilis perferendis accusamus eligendi mollitia? Vitae nemo voluptate quaerat!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my gallery</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body class="m-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Categories
+                    </div>
+                    <ul class="list-group list-group-flush">
+                    <li class="list-group-item">All photos</li>
+                    <li class="list-group-item">photo1</li>
+                    <li class="list-group-item">category</li>
+                    <li class="list-group-item">view</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div>
+                        <div class="card my-2">
+                            <img class="image-thumbail"
+                                src="https://unsplash.com/photos/nKC772R_qog"
+                                alt="our first image">
+                            <div class="card-body">
+                                <p>Category: Pets</p>
+                            </div>
+                            <a href="{% url 'photo'  %}" class="btn btn-outline-dark sm-m-1 ">View</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card my-2">
+                            <img class="image-thumbail" src="https://unsplash.com/photos/nKC772R_qog" alt="our first image">
+                            <div class="card-body">
+                                <p>Category: Pets</p>
+                            </div>
+                            <a href="{% url 'photo'  %}" class="btn btn-outline-dark sm-m-1 ">View</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card my-2">
+                            <img class="image-thumbail" src="https://unsplash.com/photos/nKC772R_qog" alt="our first image">
+                            <div class="card-body">
+                                <p>Category: Pets</p>
+                            </div>
+                            <a href="{% url 'photo' %}" class="btn btn-outline-dark sm-m-1 ">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
