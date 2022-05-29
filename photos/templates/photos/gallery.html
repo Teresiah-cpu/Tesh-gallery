@@ -25,9 +25,9 @@
                     </div>
                     <ul class="list-group list-group-flush">
                     <li class="list-group-item">All photos</li>
-                    <li class="list-group-item">photo1</li>
-                    <li class="list-group-item">category</li>
-                    <li class="list-group-item">view</li>
+                    {% for category in categories %}
+                    <li class="list-group-item"> {{category.name}}</li>
+                        {% endfor %}
                     <li class="list-group-item">
                         <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Add photo</a>
                     </li>
