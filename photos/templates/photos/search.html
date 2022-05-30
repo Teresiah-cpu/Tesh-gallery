@@ -22,7 +22,7 @@
                 <div class="card-body">
                     <small>Category:{{photo.category.name}}</small>
                     <p> Description </p>
-                    <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm m-1">view</a>
+                    <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm m-1">view</a>
                 </div>
             </div>
         </div>

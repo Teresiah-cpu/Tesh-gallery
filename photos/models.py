@@ -17,11 +17,12 @@ class Photo(models.Model):
     # name = models.CharField(max_length =30,null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     image = models.ImageField(null=False, blank=False)
+
     # image = models.ImageField(default='DEFAULT VALUE')
     description = models.TextField()
 
     def __str__(self):
-        return self.description  
+        return self.description 
 
     
     # get all images
@@ -45,7 +46,7 @@ class Photo(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        searched_photos=cls.objects.filter(category__category__icontains=search_term)
+        searched_photos=cls.objects.filter(category__category__contains=search_term)
         return searched_photos
 
 

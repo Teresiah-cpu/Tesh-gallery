@@ -3,6 +3,7 @@ from sre_parse import CATEGORIES
 from unicodedata import category
 from django.shortcuts import redirect, render
 import pkg_resources
+from django.http  import HttpResponse,Http404
 from .models import Category, Photo
 # Create your views here.
 
