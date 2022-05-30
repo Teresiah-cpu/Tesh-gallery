@@ -6,11 +6,13 @@ from .models import Category, Photo
 
 def gallery(request):
     categories = Category.objects.all()
-    context = {'categories': categories}
-    return render(request, 'photos/gallery.html', context)
+    photos =Photo.objects.all()
+    context = {'categories': categories, 'photos': photos}
+    return render(request,'photos/gallery.html', context)
 
 def viewphoto(request):
-    return render(request, 'photos/photo.html')
+    photo = Photo.objects.all()
+    return render(request, 'photos/photo.html', {'photo': photo})
 
 def addphoto(request):
     return render(request, 'photos/add.html')            
