@@ -5,8 +5,9 @@
 Landing Page
 ```
  <img src="./static/images/homepage.png"> 
- <img src="./static/images/addphoto.png"> 
  <img src="./static/images/homepage2.png">
+  <img src="./static/images/addphoto.png"> 
+
 
 ## Description
 <p>A web application that displays a list of various images in their categories. On choosing a category, it will preview that category as modal.</p>
