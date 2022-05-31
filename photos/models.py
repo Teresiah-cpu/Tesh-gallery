@@ -33,7 +33,8 @@ class Location(models.Model):
 class Photo(models.Model):
     # name = models.CharField(max_length =30,null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
-    image = models.ImageField(null=False, blank=False)
+    # image = models.ImageField(null=False, blank=False)
+    image=models.ImageField(upload_to='pictures/')
     location = models.ForeignKey(Location,on_delete=models.SET_NULL, null=True, blank=True)
     # image = models.ImageField(default='DEFAULT VALUE')
     description = models.TextField()
