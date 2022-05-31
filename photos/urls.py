@@ -7,4 +7,5 @@ urlpatterns= [
     path('photo/<str:pk>/',views.viewphoto, name='photo'),
     url('add/', views.addphoto, name='add'),
     url('search/', views.search_results, name='search_results'),
+    url(r'^location/(\d+)', views.get_location, name='get_location')
 ]

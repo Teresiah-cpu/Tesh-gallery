@@ -4,7 +4,7 @@ from unicodedata import category
 from django.shortcuts import redirect, render
 import pkg_resources
 from django.http  import HttpResponse,Http404
-from .models import Category, Photo
+from .models import Category, Photo,Location
 # Create your views here.
 
 def gallery(request):
@@ -15,9 +15,10 @@ def gallery(request):
         photos = Photo.objects.filter(category__name__contains=category)
 
     categories = Category.objects.filter()
-    # locations=Location.objects.all()
-    context = {'categories': categories, 'photos': photos}
-    return render(request, 'photos/gallery.html', context)
+    locations=Location.objects.all()
+
+    context = {'categories': categories, 'photos': photos, 'locations':locations}
+    return render(request,'photos/gallery.html', context)
 
 def viewphoto(request,pk):
     photo = Photo.objects.get(id=pk)
@@ -62,3 +63,9 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'photos/search.html',{"message":message})               
+
+
+def get_location(request,location_id):
+    photos=Photo.filter_by_location(location_id)
+
+    return render (request,'photos/location.html',{'photos':photos})
