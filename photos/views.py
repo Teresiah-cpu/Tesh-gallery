@@ -50,11 +50,13 @@ def addphoto(request):
 
 
 def search_results(request):
+    categories = Category.objects.all()
     if 'photo' in request.GET and request.GET["photo"]:
         search_term = request.GET.get("photo")
         searched_photos = Photo.search_by_category(search_term)
         message = f"{search_term}"
 
+        print(searched_photos)
         return render(request, 'photos/search.html',{"message":message,"photos": searched_photos})
 
     else:

@@ -1,4 +1,4 @@
-<!-- {%extends 'photos/base.html'%} -->
+{%extends 'photos/base.html'%}
 
 {% block content %}
 <div class="container">
@@ -14,7 +14,7 @@
     </div>
     <div class="row">
 
-        {% if photos %}
+        <!-- {% if photos %} -->
         {% for photo in photos %}
         <div class="col-md-3">
             <div class="card" style="margin-bottom: 1vw;">
@@ -30,7 +30,7 @@
 
 
         {% endfor %}
-        {% endif %}
+        <!-- {% endif %} -->
     </div>
 </div>
 {% endblock %}
